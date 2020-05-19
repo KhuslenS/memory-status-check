@@ -13,7 +13,7 @@ to="admin@email.com"
 also_to="engineer@email.com"
 
 ##get total free memory size in megabytes(MB)
-free=$(free -mt | gret Total | awk '{print $4}')
+free=$(free -mt | grep Total | awk '{print $4}')
 
 ##check if free memory is less or equals to 100MB
 if [[ "$free" -le 100 ]]; then
